@@ -1,6 +1,7 @@
 ###🚀 Auto-Instalador Docker Swarm + Traefik + Portainer
 Automatize a configuração do seu ambiente Docker Swarm com um único script! Este projeto facilita a instalação do Docker Swarm, configuração de rede, Traefik e Portainer, reduzindo o tempo de deploy e garantindo um setup otimizado.
 
+<br>
 📌 Pré-requisitos
 Antes de começar, certifique-se de estar utilizando um sistema Linux compatível com Docker Swarm.
 🛠️ Passo a passo para instalação
@@ -48,19 +49,22 @@ Agora, basta rodar o comando abaixo para iniciar a instalação:
 
 <br>
 🔍 O que este script faz?
-✅ Instalação automática do Docker Swarm
-✅ Criação de rede overlay personalizada
-✅ Configuração do Traefik com suporte a SSL via Let's Encrypt
-✅ Deploy automático do Portainer para gerenciamento do Docker
-✅ Geração dinâmica de arquivos traefik.yaml e portainer.yaml
+<br>✅ Instalação automática do Docker Swarm
+<br>✅ Criação de rede overlay personalizada
+<br>✅ Configuração do Traefik com suporte a SSL via Let's Encrypt
+<br>✅ Deploy automático do Portainer para gerenciamento do Docker
+<br>✅ Geração dinâmica de arquivos traefik.yaml e portainer.yaml
 
+<br>
 📢 Atenção
 - Durante a execução, o script pedirá algumas informações, como nome da rede, e-mail para SSL, e domínio do Portainer. Certifique-se de fornecer corretamente esses dados!
 - Após o término da instalação, aguarde cerca de 30 segundos antes de acessar o Portainer pelo navegador.
 🔗 Acesse o Portainer usando o domínio que você configurou durante a instalação!
 
+<br>
 💡 Dúvidas ou sugestões?
 Contribua com o projeto no GitHub ou entre em contato! 🚀
 
+<br>
 Esse formato torna as instruções mais organizadas e atrativas, facilitando a compreensão dos usuários que acessarem o repositório. 🎯
 Se precisar de mais ajustes ou adicionar detalhes extras, me avise! 🔧🚀
