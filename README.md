@@ -12,25 +12,28 @@ apt install git -y
 
 2️⃣ Faça o clone do repositório
 Baixe o script diretamente do nosso repositório no GitHub:
+```bash
 git clone https://github.com/inovaboost/Auto-instalador-docker.git
-
+```
 
 3️⃣ Acesse a pasta do script
 Entre na pasta do repositório para poder executar os arquivos:
+```bash
 cd Auto-instalador-docker
-
+```
 
 4️⃣ Dê permissão de execução ao script
 Antes de rodá-lo, é necessário garantir que o arquivo tenha permissões para execução:
+```bash
 chmod +x install_docker_swarm.sh
-
+```
 
 5️⃣ Execute o script de instalação
 Agora, basta rodar o comando abaixo para iniciar a instalação:
-./install_docker_swarm.sh
+
 ```bash
 ./install_docker_swarm.sh
-````
+c
 
 🔍 O que este script faz?
 ✅ Instalação automática do Docker Swarm
