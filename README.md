@@ -28,8 +28,9 @@ chmod +x install_docker_swarm.sh
 5️⃣ Execute o script de instalação
 Agora, basta rodar o comando abaixo para iniciar a instalação:
 ./install_docker_swarm.sh
-
-
+```bash
+./install_docker_swarm.sh
+````
 
 🔍 O que este script faz?
 ✅ Instalação automática do Docker Swarm
