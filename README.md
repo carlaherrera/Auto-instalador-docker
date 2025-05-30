@@ -10,6 +10,7 @@ Antes de começar, certifique-se de estar utilizando um sistema Linux compatíve
 Siga os passos abaixo para configurar seu ambiente automaticamente.
 
 <br>
+<br>
 1️⃣ Instale o Git
 Se ainda não tem o Git instalado, execute o seguinte comando no terminal:
 
