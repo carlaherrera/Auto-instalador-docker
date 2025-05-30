@@ -71,7 +71,3 @@ Agora, basta rodar o comando abaixo para iniciar a instalação:
 💡 Dúvidas ou sugestões?
 Contribua com o projeto no GitHub ou entre em contato! 🚀
 
-<br>
-<br>
-Esse formato torna as instruções mais organizadas e atrativas, facilitando a compreensão dos usuários que acessarem o repositório. 🎯
-Se precisar de mais ajustes ou adicionar detalhes extras, me avise! 🔧🚀
