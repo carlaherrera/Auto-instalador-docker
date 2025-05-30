@@ -51,6 +51,7 @@ Agora, basta rodar o comando abaixo para iniciar a instalação:
 ```
 
 <br>
+<br>
 🔍 O que este script faz?
 <br>✅ Instalação automática do Docker Swarm
 <br>✅ Criação de rede overlay personalizada
@@ -59,15 +60,18 @@ Agora, basta rodar o comando abaixo para iniciar a instalação:
 <br>✅ Geração dinâmica de arquivos traefik.yaml e portainer.yaml
 
 <br>
+<br>
 📢 Atenção
 - Durante a execução, o script pedirá algumas informações, como nome da rede, e-mail para SSL, e domínio do Portainer. Certifique-se de fornecer corretamente esses dados!
 - Após o término da instalação, aguarde cerca de 30 segundos antes de acessar o Portainer pelo navegador.
 🔗 Acesse o Portainer usando o domínio que você configurou durante a instalação!
 
 <br>
+<br>
 💡 Dúvidas ou sugestões?
 Contribua com o projeto no GitHub ou entre em contato! 🚀
 
+<br>
 <br>
 Esse formato torna as instruções mais organizadas e atrativas, facilitando a compreensão dos usuários que acessarem o repositório. 🎯
 Se precisar de mais ajustes ou adicionar detalhes extras, me avise! 🔧🚀
