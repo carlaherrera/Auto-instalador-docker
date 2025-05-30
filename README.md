@@ -8,6 +8,8 @@ Siga os passos abaixo para configurar seu ambiente automaticamente.
 1️⃣ Instale o Git
 Se ainda não tem o Git instalado, execute o seguinte comando no terminal:
 
+<br>
+
 ```bash
 apt install git -y
 ```
