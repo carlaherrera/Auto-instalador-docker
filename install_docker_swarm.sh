@@ -1,26 +1,28 @@
 #!/bin/bash
 
 set -e  # Interrompe a execução em caso de erro
+set -x  # Mostra cada comando antes de ser executado
 
 # Atualizando pacotes e instalando dependências
 echo "Atualizando pacotes..."
 sudo apt update && sudo apt upgrade -y
 
 # Instalando o Docker
-echo "Instalando Docker..."
-curl -fsSL https://get.docker.com | bash
+echo "Verificando se o Docker já está instalado..."
+if ! command -v docker &> /dev/null
+then
+    echo "Instalando Docker..."
+    curl -fsSL https://get.docker.com | bash
+else
+    echo "Docker já está instalado. Pulando esta etapa..."
+fi
 
 # Adicionando usuário ao grupo docker
 echo "Adicionando usuário ao grupo docker..."
-sudo usermod -aG docker $USER
-newgrp docker
+sudo usermod -aG docker root
 
-# Verificando instalação do Docker
-if ! command -v docker &> /dev/null
-then
-    echo "Erro: Docker não foi instalado corretamente!"
-    exit 1
-fi
+# **Removido o comando newgrp docker, para evitar interrupção do script**
+echo "Reinicie a sessão ou execute 'exec su - root' para aplicar as mudanças de grupo."
 
 # Inicializando o Docker Swarm
 echo "Inicializando Docker Swarm..."
