@@ -1,4 +1,4 @@
-🚀 Auto-Instalador Docker Swarm + Traefik + Portainer
+###🚀 Auto-Instalador Docker Swarm + Traefik + Portainer
 Automatize a configuração do seu ambiente Docker Swarm com um único script! Este projeto facilita a instalação do Docker Swarm, configuração de rede, Traefik e Portainer, reduzindo o tempo de deploy e garantindo um setup otimizado.
 
 📌 Pré-requisitos
@@ -33,7 +33,7 @@ Agora, basta rodar o comando abaixo para iniciar a instalação:
 
 ```bash
 ./install_docker_swarm.sh
-c
+```
 
 🔍 O que este script faz?
 ✅ Instalação automática do Docker Swarm
