@@ -4,6 +4,8 @@ Automatize a configuração do seu ambiente Docker Swarm com um único script! E
 <br>
 📌 Pré-requisitos
 Antes de começar, certifique-se de estar utilizando um sistema Linux compatível com Docker Swarm.
+
+<br>
 🛠️ Passo a passo para instalação
 Siga os passos abaixo para configurar seu ambiente automaticamente.
 
