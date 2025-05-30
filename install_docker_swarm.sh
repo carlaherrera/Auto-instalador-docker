@@ -7,10 +7,8 @@ set -x  # Mostra cada comando antes de ser executado
 echo "Atualizando pacotes..."
 sudo apt update && sudo apt upgrade -y
 
-# Instalando o Docker
-echo "Verificando se o Docker já está instalado..."
-if ! command -v docker &> /dev/null
-then
+# Verificando se o Docker já está instalado antes de tentar instalar
+if ! command -v docker &> /dev/null; then
     echo "Instalando Docker..."
     curl -fsSL https://get.docker.com | bash
 else
@@ -21,12 +19,16 @@ fi
 echo "Adicionando usuário ao grupo docker..."
 sudo usermod -aG docker root
 
-# **Removido o comando newgrp docker, para evitar interrupção do script**
-echo "Reinicie a sessão ou execute 'exec su - root' para aplicar as mudanças de grupo."
+# Informar ao usuário que ele deve reiniciar a sessão manualmente
+echo "Para aplicar as mudanças de grupo, reinicie a sessão ou execute 'exec su - root'."
 
-# Inicializando o Docker Swarm
-echo "Inicializando Docker Swarm..."
-docker swarm init || { echo "Erro ao inicializar Docker Swarm"; exit 1; }
+# Verificando se o Swarm já está inicializado
+if docker info | grep -q "Swarm: active"; then
+    echo "Docker Swarm já está ativo. Pulando a inicialização..."
+else
+    echo "Inicializando Docker Swarm..."
+    docker swarm init || { echo "Erro ao inicializar Docker Swarm"; exit 1; }
+fi
 
 # Solicita o nome da rede ao usuário
 read -p "Digite o nome da rede interna: " NETWORK_NAME
