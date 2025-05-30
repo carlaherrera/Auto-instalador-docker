@@ -5,15 +5,16 @@ Automatize a configuração do seu ambiente Docker Swarm com um único script! E
 Antes de começar, certifique-se de estar utilizando um sistema Linux compatível com Docker Swarm.
 🛠️ Passo a passo para instalação
 Siga os passos abaixo para configurar seu ambiente automaticamente.
-1️⃣ Instale o Git
-Se ainda não tem o Git instalado, execute o seguinte comando no terminal:
 
 <br>
+1️⃣ Instale o Git
+Se ainda não tem o Git instalado, execute o seguinte comando no terminal:
 
 ```bash
 apt install git -y
 ```
 
+<br>
 2️⃣ Faça o clone do repositório
 Baixe o script diretamente do nosso repositório no GitHub:
 
@@ -21,6 +22,7 @@ Baixe o script diretamente do nosso repositório no GitHub:
 git clone https://github.com/inovaboost/Auto-instalador-docker.git
 ```
 
+<br>
 3️⃣ Acesse a pasta do script
 Entre na pasta do repositório para poder executar os arquivos:
 
@@ -28,6 +30,7 @@ Entre na pasta do repositório para poder executar os arquivos:
 cd Auto-instalador-docker
 ```
 
+<br>
 4️⃣ Dê permissão de execução ao script
 Antes de rodá-lo, é necessário garantir que o arquivo tenha permissões para execução:
 
@@ -35,6 +38,7 @@ Antes de rodá-lo, é necessário garantir que o arquivo tenha permissões para 
 chmod +x install_docker_swarm.sh
 ```
 
+<br>
 5️⃣ Execute o script de instalação
 Agora, basta rodar o comando abaixo para iniciar a instalação:
 
@@ -42,6 +46,7 @@ Agora, basta rodar o comando abaixo para iniciar a instalação:
 ./install_docker_swarm.sh
 ```
 
+<br>
 🔍 O que este script faz?
 ✅ Instalação automática do Docker Swarm
 ✅ Criação de rede overlay personalizada
