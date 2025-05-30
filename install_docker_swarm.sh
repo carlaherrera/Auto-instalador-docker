@@ -2,7 +2,7 @@
 
 # Atualizando pacotes e instalando dependências
 echo "Atualizando pacotes..."
-sudo apt-get update ; apt-get install -y apparmor-utils
+sudo apt update && sudo apt upgrade -y
 
 # Instalando o Docker
 echo "Instalando Docker..."
