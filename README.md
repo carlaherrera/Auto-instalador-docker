@@ -72,7 +72,7 @@ chmod +x install_evolution_api.sh
 🔍 O que este script faz?
 <br>✅ Instalação automática do Docker Swarm
 <br>✅ Criação de rede overlay personalizada
-<br>✅ Configuração do Traefik com suporte a SSL via Let's Encrypt
+<br>✅ Configuração do Traefik 3 (provider Swarm) com suporte a SSL via Let's Encrypt
 <br>✅ Deploy automático do Portainer para gerenciamento do Docker
 <br>✅ Geração dinâmica de arquivos traefik.yaml e portainer.yaml
 <br>✅ Deploy opcional do n8n integrado ao Traefik

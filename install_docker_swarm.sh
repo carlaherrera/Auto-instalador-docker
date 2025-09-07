@@ -31,7 +31,7 @@ else
 fi
 
 # Solicita o nome da rede ao usuário
-read -p "Digite o nome da rede pública: " NETWORK_NAME
+read -r -p "Digite o nome da rede pública: " NETWORK_NAME
 
 # Criando a rede overlay
 echo "Criando rede overlay..."
@@ -47,10 +47,10 @@ services:
     image: traefik:3.5.1
     command:
       - "--api.dashboard=true"
-      - "--providers.docker.swarmMode=true"
-      - "--providers.docker.endpoint=unix:///var/run/docker.sock"
-      - "--providers.docker.exposedbydefault=false"
-      - "--providers.docker.network=$NETWORK_NAME"
+      - "--providers.swarm=true"
+      - "--providers.swarm.endpoint=unix:///var/run/docker.sock"
+      - "--providers.swarm.exposedbydefault=false"
+      - "--providers.swarm.network=$NETWORK_NAME"
       - "--entrypoints.web.address=:80"
       - "--entrypoints.web.http.redirections.entryPoint.to=websecure"
       - "--entrypoints.web.http.redirections.entryPoint.scheme=https"
@@ -75,7 +75,7 @@ services:
         - "traefik.http.middlewares.redirect-https.redirectscheme.permanent=true"
         - "traefik.http.routers.http-catchall.rule=hostregexp(\`{host:.+}\`)"
         - "traefik.http.routers.http-catchall.entrypoints=web"
-        - "traefik.http.routers.http-catchall.middlewares=redirect-https@docker"
+        - "traefik.http.routers.http-catchall.middlewares=redirect-https@swarm"
         - "traefik.http.routers.http-catchall.priority=1"
     volumes:
       - "/var/run/docker.sock:/var/run/docker.sock:ro"
@@ -105,7 +105,7 @@ networks:
 EOF
 
 # Solicita o e-mail do usuário para certificados SSL
-read -p "Digite seu e-mail para SSL (Let's Encrypt): " USER_EMAIL
+read -r -p "Digite seu e-mail para SSL (Let's Encrypt): " USER_EMAIL
 sed -i "s|(EMAIL_DO_USUARIO)|$USER_EMAIL|g" traefik.yaml
 
 # Deploy do Traefik
@@ -147,7 +147,7 @@ services:
         constraints: [node.role == manager]
       labels:
         - "traefik.enable=true"
-        - "traefik.docker.network=$NETWORK_NAME"
+        - "traefik.swarm.network=$NETWORK_NAME"
         - "traefik.http.routers.portainer.rule=Host(\`DOMINIO_DO_USUARIO\`)"
         - "traefik.http.routers.portainer.entrypoints=websecure"
         - "traefik.http.routers.portainer.priority=1"
@@ -168,7 +168,7 @@ volumes:
 EOF
 
 # Solicita domínio ao usuário
-read -p "Digite seu domínio para acesso ao Portainer: " USER_DOMAIN
+read -r -p "Digite seu domínio para acesso ao Portainer: " USER_DOMAIN
 sed -i "s|DOMINIO_DO_USUARIO|$USER_DOMAIN|g" portainer.yaml
 
 # Verificando se o Traefik está rodando antes de iniciar o deploy do Portainer

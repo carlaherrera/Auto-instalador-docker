@@ -4,16 +4,16 @@ set -e  # Interrompe a execução em caso de erro
 set -x  # Mostra cada comando antes de ser executado
 
 # Solicita o nome da rede já existente
-read -p "Digite o nome da rede pública existente: " NETWORK_NAME
+read -r -p "Digite o nome da rede pública existente: " NETWORK_NAME
 
 # Solicita domínio para o Evolution API
-read -p "Digite o domínio para o Evolution API: " EVO_DOMAIN
+read -r -p "Digite o domínio para o Evolution API: " EVO_DOMAIN
 
 # Solicita credenciais para o banco de dados PostgreSQL
-read -p "Digite o usuário do banco de dados: " POSTGRES_USER
-read -s -p "Digite a senha do banco de dados: " POSTGRES_PASSWORD
+read -r -p "Digite o usuário do banco de dados: " POSTGRES_USER
+read -r -s -p "Digite a senha do banco de dados: " POSTGRES_PASSWORD
 echo
-read -p "Digite o nome do banco de dados: " POSTGRES_DB
+read -r -p "Digite o nome do banco de dados: " POSTGRES_DB
 
 echo "Criando arquivo evolution.yaml..."
 cat <<EOT > evolution.yaml
@@ -45,7 +45,7 @@ services:
         constraints: [node.role == manager]
       labels:
         - "traefik.enable=true"
-        - "traefik.docker.network=$NETWORK_NAME"
+        - "traefik.swarm.network=$NETWORK_NAME"
         - "traefik.http.routers.evolution.rule=Host(\`$EVO_DOMAIN\`)"
         - "traefik.http.routers.evolution.entrypoints=websecure"
         - "traefik.http.routers.evolution.tls.certresolver=letsencryptresolver"
