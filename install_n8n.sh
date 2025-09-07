@@ -4,7 +4,6 @@ set -e  # Interrompe a execução em caso de erro
 set -x  # Mostra cada comando antes de ser executado
 
 # Solicita o nome da rede já existente
-
 read -r -p "Digite o nome da rede pública existente: " NETWORK_NAME
 
 # Solicita domínio para o n8n
@@ -13,7 +12,6 @@ read -r -p "Digite o domínio para o n8n: " N8N_DOMAIN
 # Solicita credenciais básicas
 read -r -p "Digite o usuário para o n8n (auth básica): " N8N_USER
 read -r -s -p "Digite a senha para o n8n (auth básica): " N8N_PASSWORD
-
 read -p "Digite o nome da rede pública existente: " NETWORK_NAME
 
 # Solicita domínio para o n8n
@@ -22,9 +20,7 @@ read -p "Digite o domínio para o n8n: " N8N_DOMAIN
 # Solicita credenciais básicas
 read -p "Digite o usuário para o n8n (auth básica): " N8N_USER
 read -s -p "Digite a senha para o n8n (auth básica): " N8N_PASSWORD
-
 echo
-
 echo "Criando arquivo n8n.yaml..."
 cat <<EOT > n8n.yaml
 version: "3.7"
@@ -51,11 +47,9 @@ services:
         constraints: [node.role == manager]
       labels:
         - "traefik.enable=true"
-
         - "traefik.swarm.network=$NETWORK_NAME"
-
+        - "traefik.swarm.network=$NETWORK_NAME"
         - "traefik.docker.network=$NETWORK_NAME"
-
         - "traefik.http.routers.n8n.rule=Host(\`$N8N_DOMAIN\`)"
         - "traefik.http.routers.n8n.entrypoints=websecure"
         - "traefik.http.routers.n8n.tls.certresolver=letsencryptresolver"
