@@ -1,5 +1,7 @@
 ###🚀 Auto-Instalador Docker Swarm + Traefik + Portainer + n8n
 Automatize a configuração do seu ambiente Docker Swarm com um único script! Este projeto facilita a instalação do Docker Swarm, configuração de rede, Traefik, Portainer e n8n, reduzindo o tempo de deploy e garantindo um setup otimizado. Agora utiliza as versões mais recentes das ferramentas, incluindo **Traefik 3.5.1** e **Portainer CE 2.33.1**.
+###🚀 Auto-Instalador Docker Swarm + Traefik + Portainer
+Automatize a configuração do seu ambiente Docker Swarm com um único script! Este projeto facilita a instalação do Docker Swarm, configuração de rede, Traefik e Portainer, reduzindo o tempo de deploy e garantindo um setup otimizado. Agora utiliza as versões mais recentes das ferramentas, incluindo **Traefik 3.5.1** e **Portainer CE 2.33.1**.
 
 <br>
 📌 Pré-requisitos
@@ -23,7 +25,7 @@ apt install git -y
 Baixe o script diretamente do nosso repositório no GitHub:
 
 ```bash
-git clone https://github.com/inovaboost/Auto-instalador-docker.git
+git clone https://github.com/carlaherrera/Auto-instalador-docker.git
 ```
 
 <br>
