@@ -1,5 +1,5 @@
-###🚀 Auto-Instalador Docker Swarm + Traefik + Portainer
-Automatize a configuração do seu ambiente Docker Swarm com um único script! Este projeto facilita a instalação do Docker Swarm, configuração de rede, Traefik e Portainer, reduzindo o tempo de deploy e garantindo um setup otimizado.
+###🚀 Auto-Instalador Docker Swarm + Traefik + Portainer + n8n + Evolution API
+Automatize a configuração do seu ambiente Docker Swarm com um único script! Este projeto facilita a instalação do Docker Swarm, configuração de rede, Traefik, Portainer, n8n e Evolution API, reduzindo o tempo de deploy e garantindo um setup otimizado. Agora utiliza as versões mais recentes das ferramentas, incluindo **Traefik 3.5.1**, **Portainer CE 2.33.1** e **Evolution API (latest)**.
 
 <br>
 📌 Pré-requisitos
@@ -51,6 +51,23 @@ Agora, basta rodar o comando abaixo para iniciar a instalação:
 ```
 
 <br>
+6️⃣ (Opcional) Instale o n8n
+Se desejar utilizar o n8n, execute o script abaixo após concluir a instalação anterior:
+
+```bash
+chmod +x install_n8n.sh
+./install_n8n.sh
+```
+
+7️⃣ (Opcional) Instale o Evolution API
+Se desejar utilizar o Evolution API, execute o script abaixo após concluir a instalação anterior:
+
+```bash
+chmod +x install_evolution_api.sh
+./install_evolution_api.sh
+```
+
+<br>
 <br>
 🔍 O que este script faz?
 <br>✅ Instalação automática do Docker Swarm
@@ -58,6 +75,8 @@ Agora, basta rodar o comando abaixo para iniciar a instalação:
 <br>✅ Configuração do Traefik com suporte a SSL via Let's Encrypt
 <br>✅ Deploy automático do Portainer para gerenciamento do Docker
 <br>✅ Geração dinâmica de arquivos traefik.yaml e portainer.yaml
+<br>✅ Deploy opcional do n8n integrado ao Traefik
+<<br>✅ Deploy opcional do Evolution API integrado ao Traefik
 
 <br>
 <br>
