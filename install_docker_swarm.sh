@@ -44,7 +44,7 @@ version: "3.7"
 
 services:
   traefik:
-    image: traefik:2.11.2
+    image: traefik:3.5.1
     command:
       - "--api.dashboard=true"
       - "--providers.docker.swarmMode=true"
@@ -122,7 +122,7 @@ version: "3.7"
 
 services:
   agent:
-    image: portainer/agent:2.20.1
+    image: portainer/agent:2.33.1
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - /var/lib/docker/volumes:/var/lib/docker/volumes
@@ -134,7 +134,7 @@ services:
         constraints: [node.platform.os == linux]
 
   portainer:
-    image: portainer/portainer-ce:2.20.1
+    image: portainer/portainer-ce:2.33.1
     command: -H tcp://tasks.agent:9001 --tlsskipverify
     volumes:
       - portainer_data:/data
