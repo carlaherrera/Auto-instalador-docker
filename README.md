@@ -23,7 +23,7 @@ apt install git -y
 Baixe o script diretamente do nosso repositório no GitHub:
 
 ```bash
-git clone https://github.com/inovaboost/Auto-instalador-docker.git
+git clone https://github.com/carlaherrera/Auto-instalador-docker.git
 ```
 
 <br>
